@@ -1,0 +1,32 @@
+{
+    "project_name": "TcpSrv",
+    "build_systems":
+    [
+        {
+            "cmd": ["make"],
+            "working_dir": "${project_path}",
+            "file_regex": "^(^\\S.*\\.\\w+):(\\d+):(\\d+): (\\w+ ?\\w+?): (.*)$"
+        }
+    ],
+    "folders":
+    [
+        {
+            "follow_symlinks": true,
+            "path": "."
+        }
+    ],
+    "settings":
+    {
+        "SublimeLinter.linters.clang.extra_flags": "",
+        "SublimeLinter.linters.clang.include_dirs": [
+            "/usr/include/",
+            "/usr/local/include/",
+            "/usr/include/c++/7/",
+            "/usr/lib/gcc/x86_64-linux-gnu/7/",
+            "."
+        ],
+
+        "sublimegdb_workingdir": "${project_path:build/}",
+        // "sublimegdb_commandline": "gdb --interpreter=mi ",
+    }
+}
